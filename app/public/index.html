@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Company Portal | Sign in</title><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section id="loginView" class="login-card">
+      <div class="brand-mark">CP</div>
+      <p class="eyebrow">COMPANY PORTAL</p>
+      <h1>Welcome back</h1><p class="muted">Sign in to view the employee directory.</p>
+      <form id="loginForm">
+        <label for="username">Username</label><input id="username" name="username" autocomplete="username" required value="admin">
+        <label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" required placeholder="Enter password" value="Admin@12345">
+        <p id="loginError" class="error" role="alert"></p>
+        <button type="submit">Sign in <span aria-hidden="true">→</span></button>
+      </form>
+      <p class="hint">Demo credentials are shown in the project README.</p>
+    </section>
+
+    <section id="dashboardView" class="dashboard hidden">
+      <header class="topbar"><div><p class="eyebrow">COMPANY PORTAL</p><h1>Employee directory</h1><p class="muted">Employee records retrieved from MySQL.</p></div><button id="logoutBtn" class="secondary">Log out</button></header>
+      <div class="summary"><div><span class="summary-label">Total employees</span><strong id="totalCount">0</strong></div><div><span class="summary-label">Database</span><strong class="db-status"><i></i> Connected</strong></div></div>
+      <div class="table-card"><div class="table-heading"><h2>Employee details</h2><span id="welcomeUser" class="muted"></span></div><div class="table-wrap"><table><thead><tr><th>ID</th><th>Employee code</th><th>Full name</th><th>Email</th><th>Department</th><th>Job title</th></tr></thead><tbody id="employeeRows"></tbody></table></div><p id="tableMessage" class="muted table-message"></p></div>
+    </section>
+  </main>
+  <script src="/app.js" defer></script>
+</body></html>
